@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-15 15:18:32.572081",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "booking",
+  "column_break_eshr",
+  "driver",
+  "customer_contact",
+  "vehicle",
+  "items_section",
+  "table_jytq",
+  "payment_section",
+  "rate_per_km",
+  "column_break_mmhj",
+  "total_amount",
+  "section_break_ism3",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ism3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Booking",
+   "options": "Ride Booking",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "RI-.MM.-.###.\nRI-.YYYY.-.###."
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver ICab"
+  },
+  {
+   "fieldname": "rate_per_km",
+   "fieldtype": "Currency",
+   "label": "Rate per KM",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_eshr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "column_break_mmhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "booking.customer_contact",
+   "fieldname": "customer_contact",
+   "fieldtype": "Data",
+   "label": "Customer Contact"
+  },
+  {
+   "fetch_from": "booking.vehicle",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle Icab"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Items",
+   "options": "Ride"
+  },
+  {
+   "fieldname": "table_jytq",
+   "fieldtype": "Table",
+   "options": "Ride Invoice Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-16 08:26:38.335690",
+ "modified_by": "Administrator",
+ "module": "ICab",
+ "name": "Ride Invoice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
