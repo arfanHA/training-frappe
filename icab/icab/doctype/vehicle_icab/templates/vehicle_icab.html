@@ -1,0 +1,11 @@
+{% extends "templates/web.html" %}
+<!-- add-breadcrumbs -->
+{% block page_content %}
+
+<img src="{{vehicle_image}}" style="height: 50px;"/>
+<h1>{{ make }} {{ model }} {{ year }}</h1>
+
+<a href="/book-a-ride/new?vehicle={{name}}" class="btn btn-primary">Book a Ride</a>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

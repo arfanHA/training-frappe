@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "",
+ "creation": "2024-05-17 08:12:26.070930",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ride Booking",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hi, Manager\n\nA new booking got created for {{ doc.vehicle }} \n\nPlease check the booking here <a  href=\"/app-ride-booking/{{doc.name}}\">Link</a>",
+ "message_type": "Markdown",
+ "modified": "2024-05-17 08:37:16.615811",
+ "modified_by": "Administrator",
+ "module": "ICab",
+ "name": "New Booking Notification",
+ "owner": "Administrator",
+ "property_value": "Accepte",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "set_property_after_alert": "",
+ "subject": "New Booking Arrive from {{doc.customer_name}} for {{doc.vehicle}}"
+}

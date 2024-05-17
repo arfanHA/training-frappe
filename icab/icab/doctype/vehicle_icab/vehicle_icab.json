@@ -1,32 +1,24 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
- "creation": "2024-05-15 13:51:40.102316",
+ "creation": "2024-05-16 15:16:21.078268",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "make",
-  "year",
-  "column_break_fgwp",
   "model",
+  "is_available",
+  "route",
+  "column_break_jeaz",
+  "year",
   "vehicle_image"
  ],
  "fields": [
   {
    "fieldname": "make",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Make",
-   "reqd": 1
-  },
-  {
-   "fieldname": "year",
-   "fieldtype": "Int",
-   "label": "Year"
-  },
-  {
-   "fieldname": "column_break_fgwp",
-   "fieldtype": "Column Break"
+   "label": "Make"
   },
   {
    "fieldname": "model",
@@ -34,15 +26,36 @@
    "label": "Model"
   },
   {
+   "fieldname": "column_break_jeaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
    "fieldname": "vehicle_image",
    "fieldtype": "Attach Image",
    "label": "Vehicle Image"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "label": "Is Available"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
- "image_field": "vehicle_image",
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_available",
  "links": [],
- "modified": "2024-05-15 13:55:21.529978",
+ "modified": "2024-05-16 15:24:34.355376",
  "modified_by": "Administrator",
  "module": "ICab",
  "name": "Vehicle Icab",
@@ -61,9 +74,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
+ "route": "vehicles",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "model"
+ "states": []
 }
